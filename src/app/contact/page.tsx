@@ -393,10 +393,10 @@ export default function ContactPage() {
                       {dict.contact.successDesc}
                     </p>
 
-                    <div className="my-4 max-w-md mx-auto p-3.5 bg-amber-50 border border-amber-200 rounded-xl text-left text-[11px] text-amber-900 space-y-1">
-                      <div className="flex items-center gap-2 font-bold text-amber-800">
-                        <AlertCircle className="w-4 h-4 text-amber-600" />
-                        <span>Sales Demo Notice</span>
+                    <div className="my-4 max-w-md mx-auto p-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-left text-[11px] text-zinc-700 space-y-1">
+                      <div className="flex items-center gap-2 font-bold text-zinc-900">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                        <span>{language === "hi" ? "व्हाट्सएप सहायता सूचना" : "Direct WhatsApp Assistance"}</span>
                       </div>
                       <p className="text-zinc-600 leading-relaxed">
                         {dict.contact.demoBackendNotice}

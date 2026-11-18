@@ -59,8 +59,12 @@ export const Header: React.FC = () => {
             className="shrink-0 flex items-center group transition-transform focus:outline-none"
             aria-label="DK Electronics Home"
           >
-            <div className="scale-[0.82] sm:scale-100 origin-left">
+            {/* Mobile: size="sm" with clear bold scale; Tablet & Desktop: size="md" for authoritative showroom prestige */}
+            <div className="block sm:hidden scale-[0.90] origin-left py-1">
               <DKLogo variant="on-dark" size="sm" />
+            </div>
+            <div className="hidden sm:block">
+              <DKLogo variant="on-dark" size="md" />
             </div>
           </Link>
 

@@ -336,10 +336,10 @@ export default function HomePage() {
 
                 {/* Showroom Signboard Recreation Mockup */}
                 <div className="py-8 my-4 bg-zinc-950/80 rounded-2xl border border-zinc-800/80 flex flex-col items-center justify-center text-center">
-                  <div className="scale-105 sm:scale-115 transform py-2">
+                  <div className="scale-115 sm:scale-125 transform py-2">
                     <DKLogo variant="on-dark" size="md" />
                   </div>
-                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest mt-4">
+                  <span className="text-[10px] sm:text-xs text-zinc-400 font-medium tracking-wide mt-4">
                     {dict.hero.facadeSubtitle}
                   </span>
                 </div>

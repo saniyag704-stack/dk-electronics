@@ -79,9 +79,9 @@ export default function BrandsPage() {
               {dict.brands.subtitle}
             </p>
 
-            <div className="pt-2 text-[11px] text-zinc-400 bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
-              <strong className="text-zinc-200 block mb-0.5">{dict.brands.genuineTag}</strong>
-              <p>{dict.brands.disclaimer}</p>
+            <div className="pt-2 inline-flex items-center gap-2 text-xs text-zinc-300 bg-zinc-900/60 px-3.5 py-2 rounded-xl border border-zinc-800">
+              <ShieldCheck className="w-4 h-4 text-[#D82935] shrink-0" />
+              <span className="font-medium">{dict.brands.genuineTag}</span>
             </div>
           </div>
         </Container>

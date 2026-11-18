@@ -972,6 +972,7 @@ export const PRODUCT_IMAGE_MAP: Record<string, string> = {
   "lg-dual-inverter-ac-1-5t": "/images/products/lg-dual-inverter-ac.jpg",
   "whirlpool-265l-double-door": "/images/products/whirlpool-265l-fridge.jpg",
   "samsung-324l-convertible-fridge": "/images/products/samsung-324l-fridge.jpg",
+  "samsung-653l-french-door-family-hub": "/images/products/samsung-324l-fridge.jpg",
   "lg-380l-smart-inverter-fridge": "/images/products/lg-380l-fridge.jpg",
   "lg-8kg-front-load-washer": "/images/products/lg-8kg-washer.jpg",
   "samsung-7kg-ecobubble-washer": "/images/products/samsung-7kg-washer.jpg",

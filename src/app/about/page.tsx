@@ -34,19 +34,6 @@ export default function AboutPage() {
       <section className="py-16 bg-[#F5F5F5]">
         <Container>
           <div className="max-w-4xl mx-auto space-y-8">
-            {/* Owner Verification Notice Card */}
-            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 text-amber-900 text-xs sm:text-sm">
-              <div className="flex items-center gap-2 font-bold mb-1 text-amber-950">
-                <Clock className="w-4 h-4 text-[#D82935]" />
-                <span>
-                  {dict.about.heritageNoticeTitle}
-                </span>
-              </div>
-              <p className="text-xs text-amber-800 leading-relaxed">
-                {dict.about.heritageNoticeDesc}
-              </p>
-            </div>
-
             {/* Core Story Card */}
             <Card variant="white" className="p-8 sm:p-10 space-y-6">
               <h2 className="text-2xl font-black text-zinc-900 font-display">

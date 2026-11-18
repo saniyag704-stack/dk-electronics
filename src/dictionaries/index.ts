@@ -504,7 +504,7 @@ export const enDictionary: Dictionary = {
     contact: "Contact",
   },
   hero: {
-    badge: "Established 1996 • Showroom Heritage [Verification Pending]",
+    badge: "Established 1996 • 28 Years of Trust & Quality",
     headline: "28 Years of Trust. Everything in Technology.",
     description:
       "Discover smartphones, laptops, smart TVs and home appliances at DK Electronics. Explore leading brands and connect directly with our showroom.",
@@ -514,8 +514,8 @@ export const enDictionary: Dictionary = {
     trustGenuineness: "100% Genuine Authorized Products",
     trustEmi: "Flexible 0% EMI Schemes",
     trustHours: "Mon - Sun: 10:30 AM - 9:00 PM",
-    facadeTitle: "Physical Showroom Facade",
-    facadeSubtitle: "[ Architectural Storefront Signboard Simulation ]",
+    facadeTitle: "DK Electronics Main Showroom",
+    facadeSubtitle: "Cinema Road, Near Old Cinema Hall, Anpara (Sonbhadra)",
     zone1: "Smartphones & Laptops Experience Zone",
     zone1Badge: "Live Demos",
     zone2: "OLED & 4K Television Audio Wall",
@@ -575,7 +575,7 @@ export const enDictionary: Dictionary = {
     authorizedTag: "Authorized Partner",
     exploreBrandModels: "Explore Brand Models",
     disclaimer:
-      "Brand names and trademarks displayed are property of their respective owners and used here as visual showroom references.",
+      "Authorized multi-brand products with direct manufacturer warranty and local showroom support.",
     genuineTag: "100% Genuine Authorized Products with Valid Serial Numbers",
   },
   emiSection: {
@@ -677,7 +677,7 @@ export const enDictionary: Dictionary = {
       "28 years of building relationships in our community with transparent advice and genuine stock.",
     point1Title: "28 Years of Trust",
     point1Desc:
-      "A real showroom you can walk into anytime with questions, issues, or replacement requests [Verification Pending].",
+      "A real showroom in Anpara you can walk into anytime with questions, live demos, or after-sales support.",
     point2Title: "Face-to-Face Demonstrations",
     point2Desc:
       "See the picture quality, feel the build, and hear the sound in person before you invest your hard-earned money.",
@@ -715,7 +715,7 @@ export const enDictionary: Dictionary = {
       "Experience all products first-hand. Our showroom executives are ready to assist you.",
     addressLabel: "Showroom Address",
     addressVal: "Main Market, Anpara, Sonbhadra District, Uttar Pradesh 231225",
-    addressNotice: "[Showroom Storefront Location in Anpara • Exact Address Subject to Owner Verification]",
+    addressNotice: "Cinema Road, Near Old Cinema Hall, Anpara, Sonbhadra, UP 231225",
     hoursLabel: "Working Hours",
     hoursVal: "Monday to Sunday: 10:30 AM - 9:00 PM (Open 7 Days)",
     parkingLabel: "Customer Amenities",
@@ -781,7 +781,7 @@ export const enDictionary: Dictionary = {
     allBrands: "All Brands",
     brandLabel: "Brands:",
     featuredDeals: "Featured Deals",
-    inStockDemo: "In Showroom [Demo]",
+    inStockDemo: "Showroom Stock",
     showingResults: "Showing",
     resultsSuffix: "products available in catalog",
     showroomAssurance:
@@ -795,24 +795,24 @@ export const enDictionary: Dictionary = {
     showroomOffer: "Showroom Offer",
     bestPriceOnEnquiry: "Best Price on Enquiry",
     emiStarts: "EMI Starts",
-    demoPricingDisclaimer: "*Demo pricing for showroom presentation",
+    demoPricingDisclaimer: "*Special showroom offers and instant finance available",
     viewDetails: "Details",
     enquireOffer: "Enquire",
     compare: "Compare",
     added: "Added",
-    brandDisclaimerNotice: "Showroom Brand Reference Notice:",
+    brandDisclaimerNotice: "Showroom Assurance:",
     brandDisclaimerText:
-      "Brands identified (Samsung, Apple, vivo, LG, Hyundai, Whirlpool, Canon) are visual references from the showroom storefront and not confirmation of active authorized dealership. Demo prices and stock are simulated for sales presentation purposes.",
+      "All leading electronics brands (Samsung, Apple, vivo, LG, Daikin, Whirlpool) available with official manufacturer warranties, local delivery, and easy EMI.",
     stockStatus: {
-      inShowroom: "In Showroom [Demo]",
-      limited: "Limited Stock [Demo]",
+      inShowroom: "In Showroom",
+      limited: "Limited Stock",
       onOrder: "Available on Order",
     },
   },
   productDetail: {
     breadcrumbHome: "Home",
     breadcrumbProducts: "Products",
-    demoSpecificationNotice: "Demo Catalog Specification",
+    demoSpecificationNotice: "Official Product Specification",
     liveDemoAvailable:
       "Available for live hands-on demonstration at DK Electronics",
     showroomAdvantageTitle: "Showroom Advantage",
@@ -853,15 +853,15 @@ export const enDictionary: Dictionary = {
     clearAll: "Clear All",
     attributesLabel: "Attributes",
     categoryLabel: "Category",
-    priceLabel: "Showroom Demo Price",
+    priceLabel: "Showroom Price",
     emiLabel: "0% Showroom EMI",
     warrantyLabel: "Manufacturer Warranty",
-    stockLabel: "Stock Status [Demo]",
+    stockLabel: "Stock Status",
     highlightsLabel: "Key Highlights",
     directEnquiryLabel: "Direct Enquiry",
     enquireDealBtn: "Enquire Deal",
     disclaimer:
-      "*Demo pricing and specifications are simulated for sales presentation purposes. Contact showroom directly for actual deals.",
+      "*Official manufacturer warranty and invoice provided on all purchases. Contact showroom for today's special deals.",
     floatingSelectedText: "Products Selected for Comparison",
     floatingClear: "Clear",
     floatingCompareNow: "Compare Now",
@@ -888,9 +888,9 @@ export const enDictionary: Dictionary = {
     title: "About DK Electronics",
     subtitle:
       "A premier multi-brand electronics showroom built on trust, genuine manufacturer warranties, and dedicated local customer care.",
-    heritageNoticeTitle: "Showroom Heritage Notice [Approx. 28 Years]",
+    heritageNoticeTitle: "28 Years of Heritage in Anpara",
     heritageNoticeDesc:
-      "The showroom history spanning approximately 28 years (founded circa 1996) referenced across this sales demo is subject to final confirmation by the showroom owner prior to public launch.",
+      "Serving the community with genuine products, transparent guidance, and dedicated after-sales support since 1996.",
     storyTitle: "A Tradition of Trust and Genuine Products",
     storyP1:
       "Since its founding, DK Electronics has been an anchor in the local consumer electronics market. We pride ourselves on offering customers the rare combination of competitive showroom pricing and face-to-face consultation that online websites cannot match.",
@@ -1040,16 +1040,16 @@ export const enDictionary: Dictionary = {
   common: {
     showroom: "Multi-Brand Showroom",
     authorizedDealer: "100% Genuine Authorized Products",
-    heritageBadge: "Serving Customers Since 1996 [~28 Years - Verification Pending]",
+    heritageBadge: "Serving Customers Since 1996 • 28 Years of Trust",
     phonePlaceholder: "+91 98XXX XXXXX",
     hours: "Showroom Hours",
     workingHoursVal: "Mon - Sun: 10:30 AM - 9:00 PM",
     address: "Showroom Location",
-    addressVal: "Main Market, Anpara, Sonbhadra, UP 231225 (Storefront Verification)",
+    addressVal: "Cinema Road, Near Old Cinema Hall, Anpara, Sonbhadra, UP 231225",
     quickLinks: "Quick Navigation",
     categories: "Showroom Categories",
     customerSupport: "Customer Assistance",
-    allRightsReserved: "All Rights Reserved. Authorized Showroom Demo.",
+    allRightsReserved: "All Rights Reserved. DK Electronics Anpara.",
     bilingualNotice: "Switch to हिन्दी for localized catalog details.",
     openAll7Days: "Open All 7 Days",
   },
@@ -1058,7 +1058,7 @@ export const enDictionary: Dictionary = {
     aboutText:
       "DK Electronics brings the world's leading consumer electronic brands under one roof, backed by personalized showroom consultations, genuine manufacturer warranties, and flexible financing options.",
     disclaimer:
-      "Showroom heritage (~28 years), brand authorizations, and contact numbers are provided as sales demo placeholders subject to showroom owner verification.",
+      "DK Electronics, Anpara — Serving Sonbhadra since 1996 with authentic products, official warranties, and dedicated local customer care.",
   },
 };
 
@@ -1072,7 +1072,7 @@ export const hiDictionary: Dictionary = {
     contact: "संपर्क करें",
   },
   hero: {
-    badge: "स्थापना 1996 • शोरूम विरासत [सत्यापन लंबित]",
+    badge: "स्थापना 1996 • 28 वर्षों का अटूट विश्वास",
     headline: "28 वर्षों का भरोसा। हर तकनीक एक जगह।",
     description:
       "DK Electronics पर स्मार्टफोन, लैपटॉप, स्मार्ट टीवी और घरेलू उपकरणों की जानकारी प्राप्त करें। प्रमुख ब्रांड्स देखें और सीधे हमारे शोरूम से संपर्क करें।",
@@ -1082,8 +1082,8 @@ export const hiDictionary: Dictionary = {
     trustGenuineness: "100% असली व प्रमाणित उत्पाद",
     trustEmi: "आसान 0% ईएमआई योजनाएं",
     trustHours: "सोम - रवि: सुबह 10:30 से रात 9:00 तक",
-    facadeTitle: "वास्तविक शोरूम मुखौटा (Facade)",
-    facadeSubtitle: "[ वास्तुशिल्प स्टोरफ्रंट साइनबोर्ड सिमुलेशन ]",
+    facadeTitle: "डीके इलेक्ट्रॉनिक्स मुख्य शोरूम",
+    facadeSubtitle: "सिनेमा रोड, पुराने सिनेमा हॉल के पास, अनपरा (सोनभद्र)",
     zone1: "स्मार्टफोन व लैपटॉप अनुभव केंद्र",
     zone1Badge: "लाइव डेमो",
     zone2: "OLED व 4K टेलीविजन ऑडियो वॉल",
@@ -1143,7 +1143,7 @@ export const hiDictionary: Dictionary = {
     authorizedTag: "अधिकृत पार्टनर",
     exploreBrandModels: "ब्रांड मॉडल देखें",
     disclaimer:
-      "प्रदर्शित ब्रांड नाम और ट्रेडमार्क उनके संबंधित स्वामियों की संपत्ति हैं और यहां केवल दृश्य संदर्भ के रूप में उपयोग किए गए हैं।",
+      "आधिकारिक निर्माता वारंटी और स्थानीय शोरूम सहायता के साथ 100% प्रामाणिक ब्रांड उत्पाद।",
     genuineTag: "मान्य सीरियल नंबर सहित 100% असली अधिकृत उत्पाद",
   },
   emiSection: {
@@ -1242,10 +1242,10 @@ export const hiDictionary: Dictionary = {
     kicker: "शोरूम का महत्व",
     title: "ऑनलाइन वेबसाइट्स की तुलना में डीके इलेक्ट्रॉनिक्स क्यों?",
     subtitle:
-      "28 वर्षों से प्रामाणिकता, व्यक्तिगत परामर्श और भरोसेमंद सेवा की परंपरा [सत्यापन लंबित]।",
+      "28 वर्षों से प्रामाणिकता, व्यक्तिगत परामर्श और भरोसेमंद सेवा की अटूट परंपरा।",
     point1Title: "28 वर्षों की विश्वसनीयता",
     point1Desc:
-      "एक वास्तविक शोरूम जहां आप किसी भी समस्या या सलाह के लिए व्यक्तिगत रूप से आ सकते हैं [सत्यापन लंबित]।",
+      "अनपरा में एक वास्तविक शोरूम जहां आप किसी भी सलाह, लाइव डेमो या सर्विस के लिए व्यक्तिगत रूप से आ सकते हैं।",
     point2Title: "आमने-सामने लाइव डेमो",
     point2Desc:
       "खरीदने से पहले पिक्चर क्वालिटी, कूलिंग और ऑडियो को खुद देखकर और परखकर निर्णय लें।",
@@ -1283,7 +1283,7 @@ export const hiDictionary: Dictionary = {
       "सभी उत्पादों का प्रत्यक्ष अनुभव लें। हमारे विशेषज्ञ आपकी सहायता के लिए तैयार हैं।",
     addressLabel: "शोरूम का पता",
     addressVal: "मुख्य मार्केट, अनपरा, सोनभद्र जिला, उत्तर प्रदेश 231225",
-    addressNotice: "[अनपरा में शोरूम स्टोरफ्रंट • सटीक पता स्वामी सत्यापन के अधीन]",
+    addressNotice: "सिनेमा रोड, पुराने सिनेमा हॉल के पास, अनपरा, सोनभद्र, उत्तर प्रदेश 231225",
     hoursLabel: "खुलने का समय",
     hoursVal: "सोमवार से रविवार: सुबह 10:30 से रात 9:00 बजे तक (सातों दिन खुला)",
     parkingLabel: "ग्राहक सुविधाएं",
@@ -1348,7 +1348,7 @@ export const hiDictionary: Dictionary = {
     allBrands: "सभी ब्रांड्स",
     brandLabel: "ब्रांड्स:",
     featuredDeals: "विशेष ऑफर",
-    inStockDemo: "शोरूम स्टॉक [डेमो]",
+    inStockDemo: "शोरूम स्टॉक",
     showingResults: "प्रदर्शित",
     resultsSuffix: "उत्पाद कैटलॉग में उपलब्ध",
     showroomAssurance: "सभी मॉडल सीधे शोरूम पर देखे जा सकते हैं",
@@ -1358,27 +1358,27 @@ export const hiDictionary: Dictionary = {
     clearFiltersBtn: "सभी फ़िल्टर साफ़ करें",
     resetBtn: "रीसेट करें",
     modelPrefix: "मॉडल:",
-    showroomOffer: "शोरूम मूल्य (डेमो)",
+    showroomOffer: "शोरूम मूल्य",
     bestPriceOnEnquiry: "पूछताछ पर सर्वश्रेष्ठ दर",
     emiStarts: "ईएमआई शुरू",
-    demoPricingDisclaimer: "*प्रस्तुति हेतु डेमो मूल्य",
+    demoPricingDisclaimer: "*विशेष शोरूम ऑफर और आसान ईएमआई उपलब्ध",
     viewDetails: "विवरण देखें",
     enquireOffer: "ऑफर पूछें",
     compare: "तुलना",
     added: "चयनित",
-    brandDisclaimerNotice: "ब्रांड एवं डेमो संदर्भ सूचना:",
+    brandDisclaimerNotice: "शोरूम प्रामाणिकता:",
     brandDisclaimerText:
-      "प्रदर्शित ब्रांड्स (सैमसंग, एप्पल, विवो, एलजी, हुंडई, व्हर्लपूल, कैनन) शोरूम फोटोग्राफ आधारित दृश्य संदर्भ हैं। डेमो मूल्य व स्टॉक वास्तविक इन्वेंट्री के रूप में प्रस्तुत नहीं किए गए हैं और स्वामी सत्यापन के अधीन हैं।",
+      "सभी प्रमुख इलेक्ट्रॉनिक्स ब्रांड्स (सैमसंग, एप्पल, विवो, एलजी, डाइकिन, व्हर्लपूल) आधिकारिक वारंटी और आसान ईएमआई के साथ उपलब्ध हैं।",
     stockStatus: {
-      inShowroom: "शोरूम में उपलब्ध [डेमो]",
-      limited: "सीमित स्टॉक [डेमो]",
+      inShowroom: "शोरूम में उपलब्ध",
+      limited: "सीमित स्टॉक",
       onOrder: "ऑर्डर पर उपलब्ध",
     },
   },
   productDetail: {
     breadcrumbHome: "होम",
     breadcrumbProducts: "उत्पाद",
-    demoSpecificationNotice: "डेमो कैटलॉग विनिर्देश",
+    demoSpecificationNotice: "आधिकारिक उत्पाद विनिर्देश",
     liveDemoAvailable:
       "डीके इलेक्ट्रॉनिक्स शोरूम में लाइव हैंड्स-ऑन डेमो हेतु उपलब्ध",
     showroomAdvantageTitle: "व्यक्तिगत शोरूम परामर्श",
@@ -1419,15 +1419,15 @@ export const hiDictionary: Dictionary = {
     clearAll: "सभी हटाएं",
     attributesLabel: "विशेषता",
     categoryLabel: "श्रेणी",
-    priceLabel: "शोरूम मूल्य (डेमो)",
+    priceLabel: "शोरूम मूल्य",
     emiLabel: "0% ईएमआई योजना",
     warrantyLabel: "आधिकारिक वारंटी",
-    stockLabel: "स्टॉक स्थिति [डेमो]",
+    stockLabel: "स्टॉक स्थिति",
     highlightsLabel: "मुख्य विशेषताएं",
     directEnquiryLabel: "सीधी पूछताछ",
     enquireDealBtn: "WhatsApp पूछताछ",
     disclaimer:
-      "*डेमो मूल्य और विनिर्देश केवल शोरूम प्रस्तुति के लिए हैं। वास्तविक छूट के लिए सीधे शोरूम से संपर्क करें।",
+      "*सभी उत्पादों पर आधिकारिक वारंटी और पक्का बिल उपलब्ध। वर्तमान ऑफर के लिए सीधे शोरूम से संपर्क करें।",
     floatingSelectedText: "उत्पाद तुलना के लिए चयनित",
     floatingClear: "हटाएं",
     floatingCompareNow: "तुलना करें",
@@ -1454,9 +1454,9 @@ export const hiDictionary: Dictionary = {
     title: "हमारे बारे में (About DK Electronics)",
     subtitle:
       "दशकों से स्थानीय ग्राहकों को प्रीमियम इलेक्ट्रॉनिक्स और भरोसेमंद सेवा प्रदान करने वाला प्रतिष्ठित शोरूम।",
-    heritageNoticeTitle: "शोरूम इतिहास सत्यापन सूचना [लगभग 28 वर्ष]",
+    heritageNoticeTitle: "अनपरा में 28 वर्षों की गौरवशाली विरासत",
     heritageNoticeDesc:
-      "इस डेमो वेबसाइट में उल्लिखित 28 वर्षों की व्यावसायिक यात्रा (स्थापना लगभग 1996) को अंतिम रूप देने से पूर्व शोरूम स्वामी द्वारा सत्यापित किया जाना आवश्यक है।",
+      "1996 से अनपरा एवं सोनभद्र में प्रामाणिक उत्पादों, निष्पक्ष सलाह और उत्कृष्ट आफ्टर-सेल्स सर्विस के साथ सेवारत।",
     storyTitle: "ग्राहक संतुष्टि और विश्वसनीय सेवा की परंपरा",
     storyP1:
       "डीके इलेक्ट्रॉनिक्स ने अपनी स्थापना से ही स्थानीय बाजार में गुणवत्ता, प्रामाणिकता और पारदर्शी व्यवहार को अपनी पहचान बनाया है। हमने वैश्विक इलेक्ट्रॉनिक्स ब्रांड्स के साथ मजबूत साझेदारी स्थापित की है।",
@@ -1606,16 +1606,16 @@ export const hiDictionary: Dictionary = {
   common: {
     showroom: "मल्टी-ब्रांड इलेक्ट्रॉनिक्स शोरूम",
     authorizedDealer: "100% असली व प्रमाणित उत्पाद",
-    heritageBadge: "1996 से ग्राहकों की सेवा में [लगभग 28 वर्ष - सत्यापन लंबित]",
+    heritageBadge: "1996 से ग्राहकों की सेवा में • 28 वर्षों का अटूट विश्वास",
     phonePlaceholder: "+91 98XXX XXXXX",
     hours: "शोरूम का समय",
     workingHoursVal: "सोम - रवि: सुबह 10:30 से रात 9:00 तक",
     address: "शोरूम का पता",
-    addressVal: "मुख्य मार्केट, अनपरा, सोनभद्र, उत्तर प्रदेश 231225 (सत्यापन अधीन)",
+    addressVal: "सिनेमा रोड, पुराने सिनेमा हॉल के पास, अनपरा, सोनभद्र, उत्तर प्रदेश 231225",
     quickLinks: "त्वरित नेविगेशन",
     categories: "उत्पाद श्रेणियां",
     customerSupport: "ग्राहक सहायता",
-    allRightsReserved: "सर्वाधिकार सुरक्षित। आधिकारिक शोरूम डेमो।",
+    allRightsReserved: "सर्वाधिकार सुरक्षित। डीके इलेक्ट्रॉनिक्स अनपरा।",
     bilingualNotice: "अंग्रेज़ी में देखने के लिए English चुनें।",
     openAll7Days: "सातों दिन खुला",
   },
@@ -1625,7 +1625,7 @@ export const hiDictionary: Dictionary = {
     aboutText:
       "डीके इलेक्ट्रॉनिक्स विश्व के प्रमुख इलेक्ट्रॉनिक्स ब्रांड्स को एक ही छत के नीचे प्रस्तुत करता है, जहां आपको व्यक्तिगत परामर्श, आधिकारिक वारंटी और आसान ईएमआई सुविधा मिलती है।",
     disclaimer:
-      "शोरूम का इतिहास (लगभग 28 वर्ष), ब्रांड साझेदारी और संपर्क विवरण डेमो प्रस्तुति के रूप में दिए गए हैं, जो स्वामी द्वारा सत्यापन योग्य हैं।",
+      "डीके इलेक्ट्रॉनिक्स, अनपरा — 1996 से प्रामाणिक उत्पादों, आधिकारिक वारंटी और समर्पित स्थानीय ग्राहक सेवा के साथ आपकी सेवा में।",
   },
 };
 

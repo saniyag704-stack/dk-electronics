@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
           {/* Column 1: Brand & Heritage */}
           <div className="space-y-4">
             <Link href="/" className="inline-block focus:outline-none">
-              <DKLogo variant="on-dark" size="sm" />
+              <DKLogo variant="on-dark" size="md" />
             </Link>
             <p className="text-xs text-zinc-400 leading-relaxed">
               {dict.footer.aboutText}

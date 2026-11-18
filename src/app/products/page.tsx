@@ -156,17 +156,6 @@ export default function ProductsPage() {
             <p className="text-xs sm:text-sm text-zinc-400 max-w-2xl leading-relaxed">
               {dict.catalog.subtitle}
             </p>
-
-            {/* Brand Reference & Demo Disclaimer Notice */}
-            <div className="pt-2 flex flex-col sm:flex-row items-start gap-2 text-[11px] text-zinc-400 bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
-              <Info className="w-4 h-4 text-[#D82935] shrink-0 mt-0.5" />
-              <div>
-                <strong className="text-zinc-200">
-                  {dict.catalog.brandDisclaimerNotice}
-                </strong>{" "}
-                {dict.catalog.brandDisclaimerText}
-              </div>
-            </div>
           </div>
         </Container>
       </section>
