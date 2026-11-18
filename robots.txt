@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+Allow: /products
+Allow: /brands
+Allow: /services
+Allow: /about
+Allow: /contact
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/*
+
+Sitemap: https://dkelectronics.in/sitemap.xml
