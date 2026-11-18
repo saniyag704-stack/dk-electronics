@@ -52,14 +52,16 @@ export const Header: React.FC = () => {
             : "bg-[#111111] border-b border-zinc-800/80"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
           {/* 1. Official DK Logo (Wings + Crest + Wordmark + Red Pill) */}
           <Link
             href="/"
             className="shrink-0 flex items-center group transition-transform focus:outline-none"
             aria-label="DK Electronics Home"
           >
-            <DKLogo variant="on-dark" size="sm" />
+            <div className="scale-[0.82] sm:scale-100 origin-left">
+              <DKLogo variant="on-dark" size="sm" />
+            </div>
           </Link>
 
           {/* 2. Desktop Navigation Links */}
@@ -90,50 +92,49 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* 3. Right Action Group (Language + Admin + Call Now + WhatsApp + Mobile Toggle) */}
-          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-            {/* Owner Admin Quick Access */}
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
+            {/* Owner Admin Quick Access - Tablet / Desktop */}
             <Link
               href="/admin"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-lg text-zinc-300 hover:text-white bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700/60 transition-colors"
+              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-lg text-zinc-300 hover:text-white bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700/60 transition-colors shrink-0"
               title={language === "hi" ? "ओनर एडमिन डैशबोर्ड (प्रोडक्ट जोड़ें और प्राइस बदलें)" : "Owner Admin Dashboard (Add Products & Set Prices)"}
             >
               <ShieldCheck className="w-3.5 h-3.5 text-[#D82935]" />
               <span className="hidden sm:inline">{language === "hi" ? "एडमिन" : "Admin"}</span>
             </Link>
 
-            {/* Visible Language Switcher in Header */}
-            <div className="hidden sm:block">
+            {/* Visible Language Switcher in Header - Tablet / Desktop */}
+            <div className="hidden sm:block shrink-0">
               <LanguageToggle variant="header" />
             </div>
 
-            {/* Call Now Action */}
+            {/* Call Now Action - Desktop only */}
             <a
               href={SHOWROOM_CONFIG.phoneTel}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-full text-zinc-300 hover:text-white bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 transition-colors"
+              className="hidden md:inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-full text-zinc-300 hover:text-white bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 transition-colors shrink-0"
               title={dict.actions.callNow}
             >
               <Phone className="w-3.5 h-3.5 text-[#D82935]" />
               <span className="hidden xl:inline">{dict.actions.callNow}</span>
             </a>
 
-            {/* WhatsApp Enquiry Action */}
+            {/* WhatsApp Enquiry Action - ALWAYS visible on all screen sizes! */}
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold px-3.5 py-2 rounded-full text-white bg-[#D82935] hover:bg-[#BA1C27] shadow-sm hover:shadow transition-all active:scale-[0.98]"
+              className="inline-flex items-center gap-1.5 text-xs font-bold px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-full text-white bg-[#25D366] hover:bg-[#1EBE5D] shadow-sm hover:shadow transition-all active:scale-95 shrink-0"
               title={dict.actions.whatsappEnquiry}
             >
-              <MessageCircle className="w-3.5 h-3.5 fill-white text-[#D82935]" />
-              <span className="hidden md:inline">{dict.actions.whatsappEnquiry}</span>
-              <span className="md:hidden">WhatsApp</span>
+              <MessageCircle className="w-3.5 h-3.5 fill-white text-[#25D366]" />
+              <span>WhatsApp</span>
             </a>
 
-            {/* Mobile Hamburger Toggle Button */}
+            {/* Mobile Hamburger Toggle Button (Triple-line button) - ALWAYS visible on mobile & tablet (< lg)! */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-800 transition-colors focus:outline-none"
+              className="lg:hidden p-2 rounded-xl text-white bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 transition-colors focus:outline-none shrink-0"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
             >
@@ -149,7 +150,7 @@ export const Header: React.FC = () => {
 
       {/* 4. Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-x-0 top-20 bottom-0 bg-[#111111]/98 backdrop-blur-xl z-40 border-b border-zinc-800 p-6 flex flex-col justify-between overflow-y-auto lg:hidden animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="fixed inset-x-0 top-16 sm:top-20 bottom-0 bg-[#111111]/98 backdrop-blur-xl z-40 border-b border-zinc-800 p-6 flex flex-col justify-between overflow-y-auto lg:hidden animate-in fade-in slide-in-from-top-4 duration-200">
           <div className="space-y-6">
             {/* Mobile Language Switcher */}
             <LanguageToggle variant="mobile" />
