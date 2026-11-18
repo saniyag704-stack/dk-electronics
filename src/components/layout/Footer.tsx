@@ -72,6 +72,15 @@ export const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
+              <li className="pt-2 border-t border-zinc-800/80">
+                <Link
+                  href="/admin"
+                  className="text-zinc-300 hover:text-[#D82935] font-semibold transition-colors duration-150 flex items-center gap-1.5"
+                >
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#D82935]" />
+                  <span>{language === "hi" ? "🔐 ओनर एडमिन पोर्टल" : "🔐 Owner Admin Portal"}</span>
+                </Link>
+              </li>
             </ul>
           </div>
 

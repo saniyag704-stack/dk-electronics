@@ -30,6 +30,7 @@ export const AddProductModal: React.FC<AddProductModalProps> = ({
   const [priceDemo, setPriceDemo] = useState<number>(62990);
   const [emiMonthlyDemo, setEmiMonthlyDemo] = useState<number>(5250);
   const [showPrice, setShowPrice] = useState<boolean>(true);
+  const [imageUrl, setImageUrl] = useState("");
   const [stockStatus, setStockStatus] = useState<StockStatus>("in_showroom");
   const [warranty_en, setWarrantyEn] = useState("1 Year Comprehensive Brand Warranty");
   const [warranty_hi, setWarrantyHi] = useState("1 वर्ष की व्यापक आधिकारिक ब्रांड वारंटी");
@@ -78,6 +79,7 @@ export const AddProductModal: React.FC<AddProductModalProps> = ({
         वारंटी: warranty_hi,
       },
       isFeatured,
+      image: imageUrl.trim() || undefined,
       colorOptions: ["Black", "Titanium Gray"],
     };
 
@@ -301,6 +303,25 @@ export const AddProductModal: React.FC<AddProductModalProps> = ({
               placeholder="Specification Bullet 3"
               className="w-full px-3 py-2 rounded-xl border border-zinc-300 focus:outline-none focus:border-[#D82935]"
             />
+          </div>
+
+          {/* Product Image URL (Optional) */}
+          <div>
+            <label className="block font-bold text-zinc-700 mb-1">
+              {language === "hi" ? "उत्पाद फोटो URL (वैकल्पिक)" : "Product Photo URL (Optional)"}
+            </label>
+            <input
+              type="url"
+              value={imageUrl}
+              onChange={(e) => setImageUrl(e.target.value)}
+              placeholder="https://... (leave empty to use default category photograph)"
+              className="w-full px-3 py-2 rounded-xl border border-zinc-300 font-mono text-xs focus:outline-none focus:border-[#D82935]"
+            />
+            <p className="text-[11px] text-zinc-500 mt-1">
+              {language === "hi"
+                ? "यदि खाली छोड़ते हैं, तो सिस्टम श्रेणी के अनुसार असली फोटो स्वतः जोड़ देगा।"
+                : "Leave blank to automatically use standard high-res showroom category image."}
+            </p>
           </div>
 
           {/* Submit & Cancel */}

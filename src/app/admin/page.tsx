@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -10,6 +10,7 @@ import { DKLogo } from "@/components/brand/DKLogo";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
 import { useLanguage } from "@/context/LanguageContext";
 import { PRODUCTS_DATA, Product, ProductCategory, BrandName, StockStatus } from "@/data/products";
+import { getStoredProducts, saveStoredProducts } from "@/lib/productStore";
 import { SHOWROOM_CONFIG } from "@/config/showroom";
 import {
   AdminRole,
@@ -77,8 +78,13 @@ export default function AdminDashboardPage() {
   // Navigation Tab State
   const [activeTab, setActiveTab] = useState<AdminTab>("overview");
 
-  // In-Memory Catalog State (Modules 3-9)
+  // Persistent Catalog State (Synced with localStorage)
   const [products, setProducts] = useState<Product[]>(PRODUCTS_DATA);
+  const [saveAlertMessage, setSaveAlertMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    setProducts(getStoredProducts());
+  }, []);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategoryFilter, setSelectedCategoryFilter] = useState<string>("all");
   const [selectedBrandFilter, setSelectedBrandFilter] = useState<string>("all");
@@ -383,17 +389,29 @@ export default function AdminDashboardPage() {
     },
   ];
 
-  // State Manipulation Handlers
+  // State Manipulation Handlers (Persisted to localStorage)
   const handleAddProduct = (newProduct: Product) => {
-    setProducts([newProduct, ...products]);
+    const updated = [newProduct, ...products];
+    setProducts(updated);
+    saveStoredProducts(updated);
+    setSaveAlertMessage(language === "hi" ? `नया उत्पाद "${newProduct.name_hi || newProduct.name_en}" सफलतापूर्वक जोड़ा गया!` : `New product "${newProduct.name_en}" added successfully!`);
+    setTimeout(() => setSaveAlertMessage(null), 4000);
   };
 
   const handleEditProduct = (updatedProduct: Product) => {
-    setProducts(products.map((p) => (p.id === updatedProduct.id ? updatedProduct : p)));
+    const updated = products.map((p) => (p.id === updatedProduct.id ? updatedProduct : p));
+    setProducts(updated);
+    saveStoredProducts(updated);
+    setSaveAlertMessage(language === "hi" ? `उत्पाद विवरण सफलतापूर्वक अपडेट किया गया!` : `Product details updated successfully!`);
+    setTimeout(() => setSaveAlertMessage(null), 4000);
   };
 
   const handleDeleteProduct = (productId: string) => {
-    setProducts(products.filter((p) => p.id !== productId));
+    const updated = products.filter((p) => p.id !== productId);
+    setProducts(updated);
+    saveStoredProducts(updated);
+    setSaveAlertMessage(language === "hi" ? `उत्पाद कैटलॉग से हटा दिया गया!` : `Product removed from catalog!`);
+    setTimeout(() => setSaveAlertMessage(null), 4000);
   };
 
   const handleUpdatePrice = (
@@ -403,19 +421,21 @@ export default function AdminDashboardPage() {
     newEmi: number,
     showPrice: boolean
   ) => {
-    setProducts(
-      products.map((p) =>
-        p.id === productId
-          ? {
-              ...p,
-              priceDemo: newPrice,
-              mrpDemo: newMrp,
-              emiMonthlyDemo: newEmi,
-              showPrice,
-            }
-          : p
-      )
+    const updated = products.map((p) =>
+      p.id === productId
+        ? {
+            ...p,
+            priceDemo: newPrice,
+            mrpDemo: newMrp,
+            emiMonthlyDemo: newEmi,
+            showPrice,
+          }
+        : p
     );
+    setProducts(updated);
+    saveStoredProducts(updated);
+    setSaveAlertMessage(language === "hi" ? `प्राइस और EMI ऑफर सफलतापूर्वक अपडेट हो गए!` : `Price & EMI updated successfully!`);
+    setTimeout(() => setSaveAlertMessage(null), 4000);
   };
 
   const handleSaveImage = (productId: string, imageUrl: string) => {
@@ -424,24 +444,24 @@ export default function AdminDashboardPage() {
   };
 
   const cycleStockStatus = (productId: string) => {
-    setProducts(
-      products.map((p) => {
-        if (p.id !== productId) return p;
-        const next: StockStatus =
-          p.stockStatus === "in_showroom"
-            ? "limited"
-            : p.stockStatus === "limited"
-            ? "order_basis"
-            : "in_showroom";
-        return { ...p, stockStatus: next };
-      })
-    );
+    const updated = products.map((p) => {
+      if (p.id !== productId) return p;
+      const next: StockStatus =
+        p.stockStatus === "in_showroom"
+          ? "limited"
+          : p.stockStatus === "limited"
+          ? "order_basis"
+          : "in_showroom";
+      return { ...p, stockStatus: next };
+    });
+    setProducts(updated);
+    saveStoredProducts(updated);
   };
 
   const toggleProductPriceVisibility = (productId: string) => {
-    setProducts(
-      products.map((p) => (p.id === productId ? { ...p, showPrice: !p.showPrice } : p))
-    );
+    const updated = products.map((p) => (p.id === productId ? { ...p, showPrice: !p.showPrice } : p));
+    setProducts(updated);
+    saveStoredProducts(updated);
   };
 
   const updateLeadStatus = (leadId: string, newStatus: "new" | "contacted" | "converted") => {
@@ -644,6 +664,14 @@ export default function AdminDashboardPage() {
           </div>
         </div>
       </header>
+
+      {/* Live Save Notification Toast */}
+      {saveAlertMessage && (
+        <div className="bg-emerald-600 text-white font-bold text-xs py-2.5 px-4 text-center flex items-center justify-center gap-2 shadow-lg animate-in slide-in-from-top-2 duration-200 sticky top-16 z-30">
+          <CheckCircle2 className="w-4 h-4 text-white" />
+          <span>{saveAlertMessage}</span>
+        </div>
+      )}
 
       {/* ─────────────────────────────────────────────────────────────
           NON-PRODUCTION PREVIEW BANNER (Explicit Demo Mode Transparency)

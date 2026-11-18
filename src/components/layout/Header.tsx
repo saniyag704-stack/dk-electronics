@@ -10,7 +10,7 @@ import {
   SHOWROOM_CONFIG,
   buildGeneralWhatsAppUrl,
 } from "@/config/showroom";
-import { Phone, MessageCircle, Menu, X } from "lucide-react";
+import { Phone, MessageCircle, Menu, X, ShieldCheck } from "lucide-react";
 
 export const Header: React.FC = () => {
   const { dict, language } = useLanguage();
@@ -89,8 +89,18 @@ export const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* 3. Right Action Group (Language + Call Now + WhatsApp + Mobile Toggle) */}
+          {/* 3. Right Action Group (Language + Admin + Call Now + WhatsApp + Mobile Toggle) */}
           <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+            {/* Owner Admin Quick Access */}
+            <Link
+              href="/admin"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-lg text-zinc-300 hover:text-white bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700/60 transition-colors"
+              title={language === "hi" ? "ओनर एडमिन डैशबोर्ड (प्रोडक्ट जोड़ें और प्राइस बदलें)" : "Owner Admin Dashboard (Add Products & Set Prices)"}
+            >
+              <ShieldCheck className="w-3.5 h-3.5 text-[#D82935]" />
+              <span className="hidden sm:inline">{language === "hi" ? "एडमिन" : "Admin"}</span>
+            </Link>
+
             {/* Visible Language Switcher in Header */}
             <div className="hidden sm:block">
               <LanguageToggle variant="header" />
@@ -190,6 +200,15 @@ export const Header: React.FC = () => {
               <MessageCircle className="w-4 h-4 fill-white text-[#D82935]" />
               <span>{dict.actions.whatsappEnquiry}</span>
             </a>
+
+            <Link
+              href="/admin"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 font-semibold text-sm hover:text-white hover:bg-zinc-800 transition"
+            >
+              <ShieldCheck className="w-4 h-4 text-[#D82935]" />
+              <span>{language === "hi" ? "🔐 ओनर एडमिन डैशबोर्ड" : "🔐 Owner Admin Dashboard"}</span>
+            </Link>
 
             <div className="text-center pt-2 text-[11px] text-zinc-500">
               {dict.common.heritageBadge}

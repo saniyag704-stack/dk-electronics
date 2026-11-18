@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -15,6 +15,7 @@ import {
   ProductCategory,
   BrandName,
 } from "@/data/products";
+import { getStoredProducts } from "@/lib/productStore";
 import { useLanguage } from "@/context/LanguageContext";
 import {
   Search,
@@ -29,6 +30,17 @@ import {
 
 export default function ProductsPage() {
   const { dict, language } = useLanguage();
+
+  const [productsList, setProductsList] = useState<Product[]>(PRODUCTS_DATA);
+
+  useEffect(() => {
+    setProductsList(getStoredProducts());
+    const handleUpdate = () => {
+      setProductsList(getStoredProducts());
+    };
+    window.addEventListener("dk_catalog_updated", handleUpdate);
+    return () => window.removeEventListener("dk_catalog_updated", handleUpdate);
+  }, []);
 
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | "all">("all");
@@ -68,7 +80,7 @@ export default function ProductsPage() {
 
   // Filter Logic
   const filteredProducts = useMemo(() => {
-    return PRODUCTS_DATA.filter((p) => {
+    return productsList.filter((p) => {
       // 1. Category Filter
       if (selectedCategory !== "all" && p.category !== selectedCategory) {
         return false;
